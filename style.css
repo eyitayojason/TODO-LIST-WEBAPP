@@ -19,10 +19,10 @@ body {
     }
     form {
         max-width: 40%;
-        margin-left: 5rem;
+        margin-left: 3rem;
     }
     header {
-        max-width: 50%;
+        max-width: 30%;
     }
 }
 
