@@ -1,57 +1,73 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-image: linear-gradient(120deg, #ff6d34, #ffddaa);
-color: white;
-font-family: "Poppins", sans-serif;
-min-height: 100vh;
+body {
+    background-image: linear-gradient(120deg, #ff6d34, #ffdda4);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
 }
-header{
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: linear-gradient(120deg, #044161, #ffdda4);
+        min-height: 100vh;
+        font-family: "Poppins", sans-serif;
+    }
+    form {
+        max-width: 40%;
+        margin-left: 10rem;
+    }
+}
+
+header {
     font-size: 1.5rem;
+    max-width: 100%
 }
-header,form{
+
+header,
+form {
     min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-form input, form button{
+form input,
+form button {
+    max-width: 100%;
     border: none;
     background: white;
     padding: 0.5rem;
     font-size: 2rem;
-   
 }
 
-form button{
+form button {
     color: #ff6d34;
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-form button:hover{
+form button:hover {
     background: #ff6d34;
     color: white;
 }
 
-.todo-container{
+.todo-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.todo-list{
+.todo-list {
     list-style: none;
-    min-width: 30%;
 }
 
-.todo{
+.todo {
     background: white;
     margin: 0.5rem;
     color: black;
@@ -62,89 +78,79 @@ form button:hover{
     transition: ease 0.5s;
 }
 
-.todo li{
+.todo li {
     flex: 1;
 }
-.trash-btn, .complete-btn{
-background: #ff6d34;
-color: white;
-border: none;
-padding: 1rem;
-cursor: pointer;
-font-size: 1rem;
+
+.trash-btn,
+.complete-btn {
+    background: #ff6d34;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
-.complete-btn{
-    background:limegreen;
+.complete-btn {
+    background: limegreen;
 }
 
-.todo-item{
+.todo-item {
     padding: 0rem 0.5rem;
     align-items: center;
     align-content: center;
     justify-content: center;
 }
 
-.fa-trash, .fa-check{
+.fa-trash,
+.fa-check {
     pointer-events: none;
 }
 
-.completed{
+.completed {
     text-decoration: line-through;
     opacity: 0.3;
 }
 
-
-
-
-
-
-.fall{
+.fall {
     transform: translateY(8rem) rotateZ(20deg);
     opacity: 0;
 }
 
-
-
-
-select{
-
+select {
     -webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-border: none;
-outline: none;
-
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
 }
 
-.select{
+.select {
     margin: 1rem;
     position: relative;
-    overflow: hidden;
-}
-select{
-    color: #ff6d34;
-    width: 10rem;
-    cursor: pointer;
-padding: 1rem;
+    overflow: visible;
 }
 
-.select::after{
+select {
+    color: #ff6d34;
+    width: 10rem;
+    cursor: default;
+    padding: 1rem;
+}
+
+.select::after {
     content: "\25BC";
     position: absolute;
     background: #ff6d34;
     top: 0;
     right: 0;
-    padding: 1rem;
+    padding: 0.73rem;
     pointer-events: none;
     transition: all 0.4s ease-in-out;
 }
 
-.select:hover::after{
+.select:hover::after {
     background: white;
     color: #ff6d34;
 }
-
-
-
-
