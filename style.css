@@ -9,6 +9,7 @@ body {
     background-color: chocolate;
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
+    max-width: 1280px;
 }
 
 @media only screen and (max-width: 720px) {
@@ -19,22 +20,22 @@ body {
         color: white;
     }
     form {
-        max-width: 70%;
-        margin-left: 7rem;
-        padding-bottom: 20rem;
+        max-width: 40rem;
+        padding-right: 5rem;
     }
     header {
-        padding-top: 10rem;
+        /* padding-top: 10rem; */
+        padding-right: 10rem;
     }
 }
 
 header {
-    font-size: 2.0rem;
+    font-size: 1.5rem;
 }
 
 header,
 form {
-    min-height: 20vh;
+    min-height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +43,6 @@ form {
 
 form input,
 form button {
-    max-width: 100%;
     border: none;
     background: white;
     padding: 0.5rem;
